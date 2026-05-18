@@ -16,16 +16,17 @@ defineProps({
   width: 400px;
   background-color: lightyellow;
   border: 3px solid #000022;
-  padding: 20px 30px;
+  padding: 10px 15px;
   display: flex;
   justify-content: space-between;
   transition: all 0.2s;
+  border-radius: 7px;
 
   .card-title {
     background-color: transparent;
     border: none;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1rem;
+    /* font-weight: bold; */
   }
 
   [type="checkbox"] {
@@ -34,8 +35,8 @@ defineProps({
 }
 
 .note-card:hover {
-  border: 3px solid black;
-  box-shadow: 0 0 10px;
+  border: 3px solid rgb(68, 68, 68);
+  /* box-shadow: 0 0 10px; */
 }
 .note-card:has(input:checked) {
   border: 3px solid lightgray;
