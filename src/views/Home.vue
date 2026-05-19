@@ -1,4 +1,5 @@
 <script setup>
+import CreateNote from "../components/CreateNote.vue";
 import Header from "../components/Header.vue";
 import NoteCard from "../components/NoteCard.vue";
 </script>
@@ -6,6 +7,6 @@ import NoteCard from "../components/NoteCard.vue";
 <template>
   <Header></Header>
   <h1>Home</h1>
-  <NoteCard></NoteCard>
+  <CreateNote></CreateNote>
 </template>
 <style></style>

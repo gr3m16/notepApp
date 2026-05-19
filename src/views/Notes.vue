@@ -1,4 +1,5 @@
 <script setup>
+import CreateNote from "../components/CreateNote.vue";
 import Header from "../components/Header.vue";
 import NoteCard from "../components/NoteCard.vue";
 import { useNoteStore } from "../stores/note";
@@ -12,8 +13,12 @@ const noteStore = useNoteStore();
   <section id="notes-page">
     <h1 class="title">My Notes</h1>
     <ul class="note-list">
+      <li><CreateNote></CreateNote></li>
       <li v-for="note in noteStore.notes" :key="note.id">
         <NoteCard :note="note"></NoteCard>
+      </li>
+      <li v-if="!noteStore.notes.length" class="empty-msg">
+        <h2>No hay ninguna nota aún!</h2>
       </li>
     </ul>
   </section>
